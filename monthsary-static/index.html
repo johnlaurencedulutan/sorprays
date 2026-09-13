@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Happy Monthsary Babii 💜</title>
+  <meta name="description" content="A little surprise for you, babi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts live in a fixed layer behind everything -->
+  <div class="heart-field" id="heartField" aria-hidden="true"></div>
+
+  <!-- Music toggle -->
+  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Play background music">
+    <span class="music-icon">♪</span>
+    <span class="music-label">Music 💜</span>
+  </button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/music/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main>
+
+    <!-- ============ SCREEN 1: THE QUESTION ============ -->
+    <section id="questionScreen" class="screen question-screen" aria-live="polite">
+      <div class="glow-orb glow-orb--one" aria-hidden="true"></div>
+      <div class="glow-orb glow-orb--two" aria-hidden="true"></div>
+
+      <p class="eyebrow-heart" aria-hidden="true">💜</p>
+
+      <h1 class="headline">Happy Monthsary<br /><span class="headline-babii">Babii</span></h1>
+
+      <p class="question">Babi, love mo ko?</p>
+
+      <p id="teaseMessage" class="tease-message" role="status">Syemre di ba??</p>
+
+      <div class="button-row" id="buttonRow">
+        <button id="yesBtn" type="button" class="btn btn-yes">YES OPKORS</button>
+        <button id="noBtn" type="button" class="btn btn-no">HINDI AYOKO</button>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 2: THE CELEBRATION ============ -->
+    <section id="successScreen" class="screen success-screen hidden" aria-live="polite">
+      <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+      <h1 class="success-headline">Iloveyouuumoreee<br />babi koo!!!! 💜</h1>
+
+      <p class="success-subheadline">Happy Monthsary, Babii! 💜</p>
+
+      <p class="success-note">
+        Thank you for being my favorite person. Here's to more months, more memories,
+        more laughs, more moments together and syempre more kain mwehehe. I love you so much, babi. 💜
+      </p>
+
+      <button id="moreSurpriseBtn" type="button" class="btn btn-secondary">eto pa</button>
+
+      <div id="bonusSurprise" class="bonus-surprise hidden">
+        <p>You're the greatest thing that Lord gave to me, babi. Iloveyouuuu!!!💜</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
